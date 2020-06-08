@@ -1,0 +1,14 @@
+// Chips
+mat-chip-list {
+    .mat-chip {
+        &.low {
+            background-color: #fad089;
+        }
+        &.medium {
+            background-color: #ff9c5c;
+        }
+        &.high {
+            background-color: #f5634b;
+        }
+    }
+}

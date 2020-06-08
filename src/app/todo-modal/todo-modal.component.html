@@ -1,0 +1,19 @@
+<div mat-dialog-content>
+    <div class="dialog-content">
+        <div class="header-row">
+            <h1 mat-dialog-title>{{data.title}}</h1>
+            <mat-chip-list>
+                <mat-chip [ngClass]="data.priority">{{data.priority}}</mat-chip>
+            </mat-chip-list>
+        </div>
+        <div class="description">
+            <span>{{data.description}}</span>
+        </div>
+    </div>
+  <div class="buttons-row">
+    <button mat-flat-button (click)="dialogRef.close()">Dismiss</button>
+    <button mat-icon-button color="warn" (click)="emitAction('remove')">
+        <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>

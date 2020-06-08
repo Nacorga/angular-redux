@@ -1,0 +1,9 @@
+<div class="header-row">
+    <div class="text">
+        <h2>Total items: {{ (todos | async).length }}</h2>
+        <p>Last update: {{ (lastUpdate | async) | date:'mediumTime' }}</p>
+    </div>
+    <div class="actions">
+        <button mat-raised-button color="warn" (click)="clearTodos()">Delete all</button>
+    </div>
+</div>

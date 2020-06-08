@@ -1,0 +1,28 @@
+<mat-card class="example-card">
+    <mat-card-content>
+        <mat-card-title>Add todo</mat-card-title>
+        <form class="form" [formGroup]="todoForm">
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label>Responsible</mat-label>
+                <input matInput formControlName="responsible">
+            </mat-form-field>
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label>Priority</mat-label>
+                <mat-select formControlName="priority">
+                  <mat-option *ngFor="let priority of priorities" [value]="priority.key">
+                    {{priority.value}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title">
+            </mat-form-field>
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label>Description</mat-label>
+                <textarea  matInput formControlName="description"></textarea>
+            </mat-form-field>
+        </form>
+        <button class="full-btn" mat-raised-button color="primary" (click)="onSubmit()" [disabled]="!todoForm.valid">Save</button>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,13 @@
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+        margin-bottom: 12px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}

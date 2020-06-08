@@ -1,0 +1,28 @@
+
+::ng-deep .mat-column-priority .mat-chip-list-wrapper {
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+
+    .mat-column-id {
+        width: 10%;
+    }
+    .mat-column-responsible {
+        cursor: pointer;
+        width: 50%;
+    }
+    .mat-column-priority {
+        text-align: center;
+        width: 20%;
+
+        ::ng-deep .mat-chip-list-wrapper {
+            justify-content: center;
+        }
+    }
+    .mat-column-completed {
+        text-align: center;
+        width: 20%;
+    }
+}
